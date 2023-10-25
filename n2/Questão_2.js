@@ -30,8 +30,6 @@ function convertToRoman(num) {
         numasroman.push("CM");
     } 
 
-    // greater than 1000
-
     numasroman.push("M".repeat(notroman[3]));
     return numasroman.reverse().join("");
 }
