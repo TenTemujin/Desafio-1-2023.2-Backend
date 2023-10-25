@@ -3,15 +3,13 @@ function convertToRoman(num) {
     const notroman = [];
     const numasroman = [];
     notroman.push(num % 10, num % 100, num % 1000, num % 10000);
-    notroman[3] = (notroman[3] - notroman[2])/1000; // greater than 1000
-    notroman[2] = (notroman[2] - notroman[1])/100; // greater than 100
-    notroman[1] = (notroman[1] - notroman[0])/10; // greater than 10
+    notroman[3] = (notroman[3] - notroman[2])/1000; 
+    notroman[2] = (notroman[2] - notroman[1])/100; 
+    notroman[1] = (notroman[1] - notroman[0])/10; 
     for (var i in values) {
         if (values[i] == notroman[0]) {
             numasroman.push(i);
         } 
-
-    // greater than 10
 
     } if (notroman[1] < 4) {
         numasroman.push("X".repeat(notroman[1]));
@@ -21,8 +19,6 @@ function convertToRoman(num) {
         numasroman.push("L" + "X".repeat(notroman[1] - 5));
     } else {
         numasroman.push("XC");
-
-    // greater than 100
 
     } if (notroman[2] < 4) {
         numasroman.push("C".repeat(notroman[2]));
